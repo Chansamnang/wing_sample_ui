@@ -32,15 +32,92 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF4F4F4),
       appBar: AppBar(
         title: IconButton(
-          icon: Icon(Icons.notifications_on),
+          icon: const Icon(Icons.notifications_on),
           onPressed: () {},
         ),
         actions: [
           Center(child: Image.asset("assets/splash.png")),
         ],
         backgroundColor: greenColor,
+      ),
+      body: Container(
+        child: GridView.count(
+          crossAxisCount: 4,
+          crossAxisSpacing: 10,
+          // childAspectRatio: 1.2,
+          padding: const EdgeInsets.fromLTRB(24, 10, 24, 24),
+          children: <Widget>[
+            Card(
+              child: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/wing_card.png"),
+                    fit: BoxFit.fitWidth,
+                    alignment: Alignment.topCenter,
+                  ),
+                ),
+                child: Text(
+                  "គណនី",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
+            ),
+            Card(
+              child: Column(
+                children: <Widget>[
+                  AspectRatio(
+                    child: Image.network(
+                        'https://images.unsplash.com/photo-1502759683299-cdcd6974244f?auto=format&fit=crop&w=440&h=220&q=60',
+                        fit: BoxFit.cover),
+                    aspectRatio: 2 / 1,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(''),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                children: [
+                  SizedBox(
+                      width: 200,
+                      height: 50,
+                      child: Image.asset(
+                        "assets/wing_card.png",
+                        fit: BoxFit.cover,
+                      )),
+                  const Text(
+                    "test",
+                    style: TextStyle(fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                children: [
+                  SizedBox(
+                      width: 200,
+                      height: 50,
+                      child: Image.asset(
+                        "assets/wing_card.png",
+                        fit: BoxFit.cover,
+                      )),
+                  const Text(
+                    "test",
+                    style: TextStyle(fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
       drawer: Container(
         width: 250,
@@ -100,6 +177,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 10,
               ),
               ListTile(
                 // dense: true,
