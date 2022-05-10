@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/color.dart';
 
-class HomeCustomWidget extends StatefulWidget {
-  const HomeCustomWidget({Key? key}) : super(key: key);
+class MainCardCustomWidget extends StatefulWidget {
+  const MainCardCustomWidget({Key? key}) : super(key: key);
 
   @override
-  State<HomeCustomWidget> createState() => _HomeCustomWidgetState();
+  State<MainCardCustomWidget> createState() => _MainCardCustomWidgetState();
 }
 
-class _HomeCustomWidgetState extends State<HomeCustomWidget> {
+class _MainCardCustomWidgetState extends State<MainCardCustomWidget> {
   Widget buildCard(String imgSrc, String text) {
     return Card(
       child: Container(

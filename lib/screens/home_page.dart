@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/home_custom_widget.dart';
+import 'package:flutter_application_1/widgets/home/financial_custom_widget.dart';
+import 'package:flutter_application_1/widgets/home/main_card_custom_widget.dart';
 import 'package:flutter_application_1/widgets/main_drawer.dart';
 
 import '../utils/color.dart';
@@ -17,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F4F4),
+      backgroundColor: greyColor,
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +36,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         backgroundColor: greenColor,
       ),
-      body: const HomeCustomWidget(),
+      body: Stack(
+        children: [
+          const MainCardCustomWidget(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 95, 0, 0),
+            child: Container(
+              child: const Text(
+                'សេវាហិរញ្ញវត្ថុ',
+                style: TextStyle(color: blueColor),
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(0, 120, 0, 0),
+            child: HomeFinancialCustomWidget(),
+          ),
+        ],
+      ),
       drawer: const SizedBox(width: 275, child: MainDrawer()),
     );
   }
