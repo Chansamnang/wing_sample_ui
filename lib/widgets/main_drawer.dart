@@ -28,9 +28,18 @@ class MainDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           Container(
-            height: 80,
-            color: greenColor,
-          ),
+              height: 80,
+              color: greenColor,
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  child: Image.asset(
+                    "assets/wing.png",
+                    width: 40,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              )),
           Container(
             height: 150,
             color: blueColor,
