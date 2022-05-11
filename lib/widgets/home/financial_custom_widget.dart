@@ -16,8 +16,8 @@ Widget buildRow(
   return Expanded(
     flex: 1,
     child: Container(
-      height: 110,
-      width: 110,
+      height: 100,
+      width: 100,
       decoration: BoxDecoration(
         color: whiteColor,
         border: Border.all(color: greyColor),
@@ -55,7 +55,7 @@ class _HomeFinancialCustomWidgetState extends State<HomeFinancialCustomWidget> {
         Row(
           children: [
             buildRow(Icons.qr_code_scanner_rounded, 'ទូទាត់តាម QR'),
-            buildRow(Icons.safety_divider, 'អាំងប៉ាវ'),
+            buildRow(Icons.money_rounded, 'អាំងប៉ាវ'),
             buildRow(Icons.local_atm_rounded, 'ដកប្រាក់'),
           ],
         ),

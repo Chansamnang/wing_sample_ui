@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^2.1.6
   flutter_launcher_icons: ^0.9.2
+  carousel_slider: ^4.1.1
 
 flutter_icons:
   image_path: "assets/ic_icon.png"
@@ -79,6 +80,7 @@ flutter:
     - assets/ic_icon.png
     - assets/wing_card.png
     - assets/wing.png
+    - assets/banner.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
